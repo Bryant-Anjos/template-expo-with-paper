@@ -7,6 +7,24 @@
     "noEmit": true,
     "skipLibCheck": true,
     "resolveJsonModule": true,
-    "strict": true
+    "strict": true,
+    "baseUrl": "./src",
+    "paths": {
+      "@assets/*": ["./assets/*"],
+      "@components/*": ["./components/*"],
+      "@config/*": ["./config/*"],
+      "@constants/*": ["./constants/*"],
+      "@contexts/*": ["./contexts/*"],
+      "@hooks/*": ["./hooks/*"],
+      "@lang/*": ["./lang/*"],
+      "@models/*": ["./models/*"],
+      "@routes/*": ["./routes/*"],
+      "@screens/*": ["./screens/*"],
+      "@server/*": ["./server/*"],
+      "@services/*": ["./services/*"],
+      "@store/*": ["./store/*"],
+      "@theme/*": ["./theme/*"],
+      "@utils/*": ["./utils/*"]
+    }
   }
 }

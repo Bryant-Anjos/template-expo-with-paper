@@ -1,21 +1,29 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import '@config/reactotronConfig'
 
-export default function App() {
+import React from 'react'
+import { Provider as StoreProvider } from 'react-redux'
+import { PersistGate } from 'redux-persist/integration/react'
+
+import { PaperProvider } from '@contexts/PaperProvider'
+import { persistor, store } from '@store/index'
+
+import Routes from './src/routes'
+
+__DEV__ &&
+  (async () => {
+    ;(await import('@server/app')).default
+  })()
+
+const App: React.FC = () => {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+    <StoreProvider store={store}>
+      <PersistGate persistor={persistor}>
+        <PaperProvider>
+          <Routes />
+        </PaperProvider>
+      </PersistGate>
+    </StoreProvider>
+  )
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default App
