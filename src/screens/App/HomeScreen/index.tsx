@@ -1,9 +1,10 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { View } from 'react-native'
-import { ActivityIndicator, Button, Text } from 'react-native-paper'
+import { Button, Text } from 'react-native-paper'
 import { useDispatch } from 'react-redux'
 
+import ThemedSkeleton from '@components/Loaders/Skeleton/ThemedSkeleton'
 import { useThemedStyles } from '@hooks/useThemedStyles'
 import { i18n } from '@lang/index'
 import { toggleTheme } from '@store/ducks/config/actions'
@@ -26,6 +27,12 @@ const HomeScreen: React.FC = () => {
       .finally(() => setLoading(false))
   }, [])
 
+  const Skeleton = (
+    <ThemedSkeleton>
+      <ThemedSkeleton.Item width={100} height={26} borderRadius={4} />
+    </ThemedSkeleton>
+  )
+
   return (
     <View style={styles.container}>
       <Text style={styles.text}>{i18n.t('hello-world')}</Text>
@@ -34,7 +41,7 @@ const HomeScreen: React.FC = () => {
       </Button>
 
       <View style={styles.apiView}>
-        {loading ? <ActivityIndicator size="large" /> : <Text>{message}</Text>}
+        {loading ? Skeleton : <Text>{message}</Text>}
       </View>
     </View>
   )
