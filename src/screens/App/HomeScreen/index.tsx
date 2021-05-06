@@ -4,11 +4,11 @@ import { View } from 'react-native'
 import { Button, Text } from 'react-native-paper'
 import { useDispatch } from 'react-redux'
 
-import ThemedSkeleton from '@components/Loaders/Skeleton/ThemedSkeleton'
 import { useThemedStyles } from '@hooks/useThemedStyles'
 import { i18n } from '@lang/index'
 import { toggleTheme } from '@store/ducks/config/actions'
 
+import Loader from './Loader'
 import themedStyles from './styles'
 
 const HomeScreen: React.FC = () => {
@@ -27,12 +27,6 @@ const HomeScreen: React.FC = () => {
       .finally(() => setLoading(false))
   }, [])
 
-  const Skeleton = (
-    <ThemedSkeleton>
-      <ThemedSkeleton.Item width={100} height={26} borderRadius={4} />
-    </ThemedSkeleton>
-  )
-
   return (
     <View style={styles.container}>
       <Text style={styles.text}>{i18n.t('hello-world')}</Text>
@@ -41,7 +35,7 @@ const HomeScreen: React.FC = () => {
       </Button>
 
       <View style={styles.apiView}>
-        {loading ? Skeleton : <Text>{message}</Text>}
+        {loading ? <Loader /> : <Text>{message}</Text>}
       </View>
     </View>
   )
