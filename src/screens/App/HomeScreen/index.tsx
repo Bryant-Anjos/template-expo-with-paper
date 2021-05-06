@@ -1,3 +1,4 @@
+import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { View } from 'react-native'
 import { ActivityIndicator, Button, Text } from 'react-native-paper'
@@ -5,7 +6,6 @@ import { useDispatch } from 'react-redux'
 
 import { useThemedStyles } from '@hooks/useThemedStyles'
 import { i18n } from '@lang/index'
-import api from '@services/api'
 import { toggleTheme } from '@store/ducks/config/actions'
 
 import themedStyles from './styles'
@@ -20,7 +20,7 @@ const HomeScreen: React.FC = () => {
   useEffect(() => {
     setLoading(true)
 
-    api
+    axios
       .get('api/hello')
       .then(({ data }) => setMessage(data.message))
       .finally(() => setLoading(false))
