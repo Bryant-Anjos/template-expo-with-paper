@@ -9,5 +9,6 @@ declare module '*.svg' {
 }
 
 declare module '@env' {
+  export const API_URL: string
   export const ASYNC_STORE_KEY: string
 }
