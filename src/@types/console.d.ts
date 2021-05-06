@@ -1,8 +1,9 @@
 /* eslint-disable import/no-extraneous-dependencies */
-import Reactotron from 'reactotron-react-native'
+import ReactotronReactJS from 'reactotron-react-js'
+import ReactotronReactNative from 'reactotron-react-native'
 
 declare global {
   interface Console {
-    tron: typeof Reactotron
+    tron: typeof ReactotronReactNative | typeof ReactotronReactJS
   }
 }

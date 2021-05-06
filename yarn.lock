@@ -4081,7 +4081,7 @@ error-ex@^1.2.0, error-ex@^1.3.1:
   dependencies:
     is-arrayish "^0.2.1"
 
-error-stack-parser@^2.0.6:
+error-stack-parser@^2.0.4, error-stack-parser@^2.0.6:
   version "2.0.6"
   resolved "https://registry.yarnpkg.com/error-stack-parser/-/error-stack-parser-2.0.6.tgz#5a99a707bd7a4c58a797902d48d82803ede6aad8"
   integrity sha512-d51brTeqC+BHlwF0BhPtcYgF5nlzf9ZZ0ZIUQNZpc9ZB9qw5IJ2diTrBY9jlCJkTLITYPjmiX6OWCwH+fuyNgQ==
@@ -4512,7 +4512,7 @@ expo-asset@~8.2.1:
     path-browserify "^1.0.0"
     url-parse "^1.4.4"
 
-expo-constants@~9.3.0, expo-constants@~9.3.3:
+expo-constants@~9.3.3:
   version "9.3.5"
   resolved "https://registry.yarnpkg.com/expo-constants/-/expo-constants-9.3.5.tgz#78085763e8ed100a5f2df7c682fd99631aa03d5e"
   integrity sha512-qIlv2ffSjQl3wrvJwXYoNfQNfH/sK46EXcgyEQnQ1SAQO4ukwTEpG9j3fdW6aTiVEVrv/DsA1IaVRqKrUwSd3A==
@@ -4542,11 +4542,6 @@ expo-font@~8.4.0:
   dependencies:
     fbjs "1.0.0"
     fontfaceobserver "^2.1.0"
-
-expo-image-loader@~1.3.0:
-  version "1.3.0"
-  resolved "https://registry.yarnpkg.com/expo-image-loader/-/expo-image-loader-1.3.0.tgz#06982a1a02f443ba6afa2cc7a4f0ccebc26a5415"
-  integrity sha512-kn+9hm42TtHi1wFEp/1nq63vp33/cIbypI2hYjGsL22PAC9yk1go1hs/ktKgVWVlgmi0ruwR09SrM6ndOs7s7w==
 
 expo-keep-awake@~8.4.0:
   version "8.4.0"
@@ -8312,31 +8307,6 @@ react-native-svg@12.1.0:
     css-select "^2.1.0"
     css-tree "^1.0.0-alpha.39"
 
-react-native-unimodules@~0.12.0:
-  version "0.12.0"
-  resolved "https://registry.yarnpkg.com/react-native-unimodules/-/react-native-unimodules-0.12.0.tgz#f1c92eae92212ca44078c0991c78fa4d13fda0f8"
-  integrity sha512-/c1d3hr+3C3yIwhSoX+KTzy0+C9cnjUvenXP2uV8X2V3ZflnPB/HQXwZPHHWITmD89HP2n3NcPBTu4UgOv/KzQ==
-  dependencies:
-    "@unimodules/core" "~6.0.0"
-    "@unimodules/react-native-adapter" "~5.7.0"
-    chalk "^2.4.2"
-    expo-asset "~8.2.1"
-    expo-constants "~9.3.0"
-    expo-file-system "~9.3.0"
-    expo-image-loader "~1.3.0"
-    expo-permissions "~10.0.0"
-    unimodules-app-loader "~1.4.0"
-    unimodules-barcode-scanner-interface "~5.4.0"
-    unimodules-camera-interface "~5.4.0"
-    unimodules-constants-interface "~5.4.0"
-    unimodules-face-detector-interface "~5.4.0"
-    unimodules-file-system-interface "~5.4.0"
-    unimodules-font-interface "~5.4.0"
-    unimodules-image-loader-interface "~5.4.0"
-    unimodules-permissions-interface "~5.4.0"
-    unimodules-sensors-interface "~5.4.0"
-    unimodules-task-manager-interface "~5.4.0"
-
 react-native-web@~0.13.12:
   version "0.13.18"
   resolved "https://registry.yarnpkg.com/react-native-web/-/react-native-web-0.13.18.tgz#964f058a16521a3b9a31b091415edfef5b6ef305"
@@ -8429,6 +8399,19 @@ reactotron-core-client@2.8.10:
   version "2.8.10"
   resolved "https://registry.yarnpkg.com/reactotron-core-client/-/reactotron-core-client-2.8.10.tgz#798f2a7aa9fd7e18e7a510531a613e8ae3008eb0"
   integrity sha512-SYRO4OCutJzfWMnaULUGVyETZnMDCU5ECNflXyM3Z5Gnfxp/wV6d7jYonhfxHdpU/aGb4Eg15C22myOCXSu6HQ==
+
+reactotron-core-client@2.8.9:
+  version "2.8.9"
+  resolved "https://registry.yarnpkg.com/reactotron-core-client/-/reactotron-core-client-2.8.9.tgz#79b96c69c017a036129a7cbce2ce6b3729995cfc"
+  integrity sha512-IAfNEst/VrWC4b5kOWkHLV0xCwM5n3Pd8q59ueotg1Tql81HnhCeHW1/lCPaaNh2B3/Eh3rAXuiM3yYWvdU36g==
+
+reactotron-react-js@^3.3.7:
+  version "3.3.7"
+  resolved "https://registry.yarnpkg.com/reactotron-react-js/-/reactotron-react-js-3.3.7.tgz#c2d09e8d6f4758be207d346185de956dc80fa91f"
+  integrity sha512-wWC2P2A2OhtUMN0L4vIphaPZXcC2HRwotNljCipEyzHDzTwvRmgsb5ZNKQjmAWGPZlqlb8EEAJA1L9A7HB8B2A==
+  dependencies:
+    reactotron-core-client "2.8.9"
+    stacktrace-js "2.0.1"
 
 reactotron-react-native@^5.0.0:
   version "5.0.0"
@@ -9156,6 +9139,11 @@ source-map-url@^0.4.0:
   resolved "https://registry.yarnpkg.com/source-map-url/-/source-map-url-0.4.1.tgz#0af66605a745a5a2f91cf1bbf8a7afbc283dec56"
   integrity sha512-cPiFOTLUKvJFIg4SKVScy4ilPPW6rFgMgfuZJPNoDuMs3nC1HbMUycBoJw77xFIp6z1UJQJOfx6C9GMH80DiTw==
 
+source-map@0.5.6:
+  version "0.5.6"
+  resolved "https://registry.yarnpkg.com/source-map/-/source-map-0.5.6.tgz#75ce38f52bf0733c5a7f0c118d81334a2bb5f412"
+  integrity sha1-dc449SvwczxafwwRjYEzSiu19BI=
+
 source-map@^0.5.0, source-map@^0.5.6:
   version "0.5.7"
   resolved "https://registry.yarnpkg.com/source-map/-/source-map-0.5.7.tgz#8a039d2d1021d22d1ea14c80d8ea468ba2ef3fcc"
@@ -9234,6 +9222,13 @@ stable@^0.1.8:
   resolved "https://registry.yarnpkg.com/stable/-/stable-0.1.8.tgz#836eb3c8382fe2936feaf544631017ce7d47a3cf"
   integrity sha512-ji9qxRnOVfcuLDySj9qzhGSEFVobyt1kIOSkj1qZzYLzq7Tos/oUUWvotUPQLlrsidqsK6tBH89Bc9kL5zHA6w==
 
+stack-generator@^2.0.4:
+  version "2.0.5"
+  resolved "https://registry.yarnpkg.com/stack-generator/-/stack-generator-2.0.5.tgz#fb00e5b4ee97de603e0773ea78ce944d81596c36"
+  integrity sha512-/t1ebrbHkrLrDuNMdeAcsvynWgoH/i4o8EGGfX7dEYDoTXOYVAkEpFdtshlvabzc6JlJ8Kf9YdFEoz7JkzGN9Q==
+  dependencies:
+    stackframe "^1.1.1"
+
 stack-utils@^1.0.1:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/stack-utils/-/stack-utils-1.0.4.tgz#4b600971dcfc6aed0cbdf2a8268177cc916c87c8"
@@ -9245,6 +9240,23 @@ stackframe@^1.1.1:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/stackframe/-/stackframe-1.2.0.tgz#52429492d63c62eb989804c11552e3d22e779303"
   integrity sha512-GrdeshiRmS1YLMYgzF16olf2jJ/IzxXY9lhKOskuVziubpTYcYqyOwYeJKzQkwy7uN0fYSsbsC4RQaXf9LCrYA==
+
+stacktrace-gps@^3.0.3:
+  version "3.0.4"
+  resolved "https://registry.yarnpkg.com/stacktrace-gps/-/stacktrace-gps-3.0.4.tgz#7688dc2fc09ffb3a13165ebe0dbcaf41bcf0c69a"
+  integrity sha512-qIr8x41yZVSldqdqe6jciXEaSCKw1U8XTXpjDuy0ki/apyTn/r3w9hDAAQOhZdxvsC93H+WwwEu5cq5VemzYeg==
+  dependencies:
+    source-map "0.5.6"
+    stackframe "^1.1.1"
+
+stacktrace-js@2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/stacktrace-js/-/stacktrace-js-2.0.1.tgz#ebdb0e9a16e6f171f96ca7878404e7f15c3d42ba"
+  integrity sha512-13oDNgBSeWtdGa4/2BycNyKqe+VktCoJ8VLx4pDoJkwGGJVtiHdfMOAj3aW9xTi8oR2v34z9IcvfCvT6XNdNAw==
+  dependencies:
+    error-stack-parser "^2.0.4"
+    stack-generator "^2.0.4"
+    stacktrace-gps "^3.0.3"
 
 stacktrace-parser@^0.1.3:
   version "0.1.10"
