@@ -19,6 +19,14 @@ module.exports = function (api) {
       [
         require.resolve('babel-plugin-module-resolver'),
         {
+          extensions: [
+            '.ts',
+            '.tsx',
+            '.ios.tsx',
+            '.android.tsx',
+            '.web.tsx',
+            '.json',
+          ],
           alias: {
             '@assets': path.join(__dirname, 'src', 'assets'),
             '@components': path.join(__dirname, 'src', 'components'),
