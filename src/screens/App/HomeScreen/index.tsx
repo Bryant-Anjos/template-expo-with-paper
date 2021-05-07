@@ -1,6 +1,6 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
-import { Button } from 'react-native-paper'
+import { Button, Text } from 'react-native-paper'
 import { useDispatch } from 'react-redux'
 
 import logo from '@assets/svg/react.svg'
@@ -10,7 +10,7 @@ import { i18n } from '@lang/index'
 import { toggleTheme } from '@store/ducks/config/actions'
 
 import Loader from './Loader'
-import { ApiWrapper, Container, Text } from './styles'
+import { ApiWrapper, Container, TextPrimary } from './styles'
 
 const HomeScreen: React.FC = () => {
   const dispatch = useDispatch()
@@ -31,7 +31,7 @@ const HomeScreen: React.FC = () => {
     <Container>
       <SVG source={logo} width={50} height={50} />
 
-      <Text>{i18n.t('hello-world')}</Text>
+      <TextPrimary>{i18n.t('hello-world')}</TextPrimary>
       <Button mode="contained" onPress={() => dispatch(toggleTheme())}>
         {i18n.t('toggle-theme')}
       </Button>
