@@ -1,21 +1,18 @@
-import { StyleSheet } from 'react-native'
+import styled from 'styled-components/native'
 
-const themedStyles = (theme: ReactNativePaper.Theme) =>
-  StyleSheet.create({
-    container: {
-      flex: 1,
-      justifyContent: 'center',
-      alignItems: 'center',
-      backgroundColor: theme.colors.surface,
-    },
-    text: {
-      fontSize: 22,
-      color: theme.colors.primary,
-      marginBottom: 10,
-    },
-    apiView: {
-      marginTop: 15,
-    },
-  })
+export const Container = styled.View`
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  background-color: ${({ theme }) => theme.colors.surface};
+`
 
-export default themedStyles
+export const Text = styled.Text`
+  font-size: 22px;
+  margin-bottom: 10px;
+  color: ${({ theme }) => theme.colors.primary};
+`
+
+export const ApiWrapper = styled.View`
+  margin-top: 15px;
+`
