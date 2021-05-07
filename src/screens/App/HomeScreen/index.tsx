@@ -4,6 +4,7 @@ import { Button } from 'react-native-paper'
 import { useDispatch } from 'react-redux'
 
 import logo from '@assets/svg/react.svg'
+import { LoaderResolver } from '@components/Loaders/LoaderResolver'
 import SVG from '@components/SVG'
 import { i18n } from '@lang/index'
 import { toggleTheme } from '@store/ducks/config/actions'
@@ -35,7 +36,11 @@ const HomeScreen: React.FC = () => {
         {i18n.t('toggle-theme')}
       </Button>
 
-      <ApiWrapper>{loading ? <Loader /> : <Text>{message}</Text>}</ApiWrapper>
+      <ApiWrapper>
+        <LoaderResolver loading={loading} loader={Loader}>
+          <Text>{message}</Text>
+        </LoaderResolver>
+      </ApiWrapper>
     </Container>
   )
 }
