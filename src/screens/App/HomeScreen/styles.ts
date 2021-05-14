@@ -13,6 +13,6 @@ export const TextPrimary = styled.Text`
   color: ${({ theme }) => theme.colors.primary};
 `
 
-export const ApiWrapper = styled.View`
-  margin-top: 15px;
+export const Spacing = styled.View`
+  margin-top: 5px;
 `

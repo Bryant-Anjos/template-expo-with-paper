@@ -5,12 +5,13 @@ import { useDispatch } from 'react-redux'
 
 import logo from '@assets/svg/react.svg'
 import { LoaderResolver } from '@components/Loaders/LoaderResolver'
+import Snackbar from '@components/Snackbar'
 import SVG from '@components/SVG'
 import { i18n } from '@lang/index'
 import { toggleTheme } from '@store/ducks/config/actions'
 
 import Loader from './Loader'
-import { ApiWrapper, Container, TextPrimary } from './styles'
+import { Container, Spacing, TextPrimary } from './styles'
 
 const HomeScreen: React.FC = () => {
   const dispatch = useDispatch()
@@ -36,11 +37,20 @@ const HomeScreen: React.FC = () => {
         {i18n.t('toggle-theme')}
       </Button>
 
-      <ApiWrapper>
-        <LoaderResolver loading={loading} loader={Loader}>
-          <Text>{message}</Text>
-        </LoaderResolver>
-      </ApiWrapper>
+      <Spacing />
+
+      <Button
+        mode="outlined"
+        onPress={() => Snackbar.show(i18n.t('snackbar.message'))}
+      >
+        {i18n.t('snackbar.show')}
+      </Button>
+
+      <Spacing />
+
+      <LoaderResolver loading={loading} loader={Loader}>
+        <Text>{message}</Text>
+      </LoaderResolver>
     </Container>
   )
 }

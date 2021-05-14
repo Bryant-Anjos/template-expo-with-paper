@@ -4,6 +4,7 @@ import React from 'react'
 import { Provider as StoreProvider } from 'react-redux'
 import { PersistGate } from 'redux-persist/integration/react'
 
+import SnackbarProvider from '@components/Snackbar/provider'
 import { PaperProvider } from '@contexts/PaperProvider'
 import { StyledProvider } from '@contexts/StyledProvider'
 import { persistor, store } from '@store/index'
@@ -21,7 +22,9 @@ const App: React.FC = () => {
       <PersistGate persistor={persistor}>
         <PaperProvider>
           <StyledProvider>
-            <Routes />
+            <SnackbarProvider>
+              <Routes />
+            </SnackbarProvider>
           </StyledProvider>
         </PaperProvider>
       </PersistGate>
