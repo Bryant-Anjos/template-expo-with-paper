@@ -6,8 +6,6 @@
     "ios": "expo start --ios",
     "web": "expo start --web",
     "eject": "expo eject",
-    "format": "prettier --write \"./src/**/*.{ts,tsx}\"",
-    "lint": "yarn eslint --fix \"./src/**/*.{ts,tsx}\"",
     "prepare": "husky install",
     "commit": "cz"
   },
@@ -93,7 +91,10 @@
   },
   "private": true,
   "lint-staged": {
-    "*.{js,ts,tsx}": "eslint --cache --fix"
+    "src/**/*.{ts,tsx}": [
+      "prettier --write",
+      "yarn eslint --fix"
+    ]
   },
   "config": {
     "commitizen": {
