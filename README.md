@@ -1,18 +1,31 @@
-## Expo template with React Native Paper ##
+## Expo template with React Native Paper
 
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 Template to build cross-platform apps using react with typescript in expo. Pre configured with the React Native Paper Ui kit, redux, and eslint with prettier.
 
-### Plugins to work with this template ###
+## Installation
+
+Copy the `.env.enxample` and rename to `.env`, then add the required values to variables.  
+```bash
+$ yarn install
+```
+
+## Running the app
+
+```bash
+$ yarn start
+```
+
+## Plugins to work with this template
 [Editorconfig](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig)  
 [Eslint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)  
 [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)  
 [Typescript import sorter](https://marketplace.visualstudio.com/items?itemName=mike-co.import-sorter)  
 
-### Project dependencies and dev dependencies ###
-#### Dependencies ####
+## Project dependencies and dev dependencies
+### Dependencies
 [axios](https://github.com/axios/axios)  
 [date-fns](https://date-fns.org)  
 [expo](https://docs.expo.io)  
@@ -49,7 +62,7 @@ Template to build cross-platform apps using react with typescript in expo. Pre c
 [reactotron](https://github.com/infinitered/reactotron)  
 [typescript](https://www.typescriptlang.org)  
 
-### Project structure ###
+## Project structure
 ```bash
 .
 ├── assets
@@ -100,3 +113,7 @@ Template to build cross-platform apps using react with typescript in expo. Pre c
 ├── tsconfig.json
 └── yarn.lock
 ```
+
+## Author
+
+- [Bryant Moreira dos Anjos](https://github.com/Bryant-Anjos)
