@@ -8,7 +8,8 @@
     "eject": "expo eject",
     "format": "prettier --write \"./src/**/*.{ts,tsx}\"",
     "lint": "yarn eslint --fix \"./src/**/*.{ts,tsx}\"",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "commit": "cz"
   },
   "dependencies": {
     "@expo/vector-icons": "^12.0.0",
@@ -64,6 +65,8 @@
     "@typescript-eslint/parser": "^4.9.1",
     "babel-jest": "~25.2.6",
     "babel-plugin-module-resolver": "^4.1.0",
+    "commitizen": "^4.2.4",
+    "cz-conventional-changelog": "^3.3.0",
     "eslint": "6.8.0",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-config-prettier": "^7.0.0",
@@ -89,5 +92,10 @@
   "private": true,
   "lint-staged": {
     "*.{js,ts,tsx}": "eslint --cache --fix"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
