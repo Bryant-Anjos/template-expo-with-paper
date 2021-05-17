@@ -17,6 +17,7 @@
     "@react-navigation/stack": "^5.12.8",
     "add": "^2.0.6",
     "axios": "^0.21.0",
+    "brn-cli": "^0.0.1",
     "date-fns": "^2.16.1",
     "expo": "^40.0.0",
     "expo-localization": "~9.1.0",

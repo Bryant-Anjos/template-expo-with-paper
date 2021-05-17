@@ -3460,6 +3460,11 @@ braces@^3.0.1:
   dependencies:
     fill-range "^7.0.1"
 
+brn-cli@^0.0.1:
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/brn-cli/-/brn-cli-0.0.1.tgz#d96187be5bbfe5eb2ca6cfcab51c6e85bf0919c3"
+  integrity sha512-X+KugWAQNP93nA1kJxXMS9gzx3JiC/IE6IIMSCaRCfbrqtTD3Hzl2UUvB6u9hwh06v5zcjk+2GICV0QfzL1jRA==
+
 browser-process-hrtime@^1.0.0:
   version "1.0.0"
   resolved "https://registry.npmjs.org/browser-process-hrtime/-/browser-process-hrtime-1.0.0.tgz"
