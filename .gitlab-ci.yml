@@ -1,9 +1,15 @@
 image: node:14
 
+variables:
+  DOCS_FOLDER: 'docs'
+
 pages:
   stage: deploy
-  script:
+  before_script:
     - npm run build-storybook
+  script:
+    - mkdir public
+    - cp -rp $DOCS_FOLDER/* public
   artifacts:
     paths:
       - public

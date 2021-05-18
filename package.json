@@ -9,7 +9,7 @@
     "prepare": "husky install",
     "commit": "cz",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook -o public"
+    "build-storybook": "build-storybook -o docs"
   },
   "dependencies": {
     "@expo/vector-icons": "^12.0.0",
