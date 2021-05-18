@@ -3,9 +3,14 @@ image: node:14
 variables:
   DOCS_FOLDER: 'docs'
 
+cache:
+  paths:
+    - ./node_modules
+
 pages:
   stage: deploy
   before_script:
+    - npm install
     - npm run build-storybook
   script:
     - mkdir public
