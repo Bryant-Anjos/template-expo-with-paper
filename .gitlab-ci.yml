@@ -1,0 +1,11 @@
+image: node:14
+
+pages:
+  stage: deploy
+  script:
+    - npm run build-storybook
+  artifacts:
+    paths:
+      - public
+  only:
+    - master
