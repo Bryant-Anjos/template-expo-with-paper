@@ -42,6 +42,10 @@ module.exports = {
     '@typescript-eslint/no-shadow': 'error',
     'no-undef': 'off',
     'react/jsx-one-expression-per-line': 'off',
+    'import/no-extraneous-dependencies': [
+      'off',
+      { extensions: ['.stories.tsx'] },
+    ],
     'import/extensions': [
       'error',
       'ignorePackages',
