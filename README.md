@@ -2,6 +2,7 @@
 
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Storybook](https://cdn.jsdelivr.net/gh/storybookjs/brand@master/badge/badge-storybook.svg)](https://storybook.js.org/)  
 
 Template to build cross-platform apps using react with typescript in expo. Pre configured with the React Native Paper Ui kit, redux, and eslint with prettier.
 
@@ -22,6 +23,7 @@ $ yarn start
 [Editorconfig](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig)  
 [Eslint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)  
 [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)  
+[Styled Components](https://marketplace.visualstudio.com/items?itemName=jpoissonnier.vscode-styled-components)  
 [Typescript import sorter](https://marketplace.visualstudio.com/items?itemName=mike-co.import-sorter)  
 
 ## Project dependencies and dev dependencies
