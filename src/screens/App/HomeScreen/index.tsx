@@ -8,12 +8,28 @@ const HomeScreenContainer: React.FC = () => {
   const [message, setMessage] = useState('')
 
   useEffect(() => {
-    setLoading(true)
+    async function fetchMessage() {
+      let mounted = true
+      setLoading(true)
 
-    axios
-      .get('api/hello')
-      .then(({ data }) => setMessage(data.message))
-      .finally(() => setLoading(false))
+      try {
+        const response = await axios.get('api/hello')
+
+        if (mounted) {
+          setMessage(response.data.message)
+        }
+      } finally {
+        if (mounted) {
+          setLoading(false)
+        }
+      }
+
+      return function unmount() {
+        mounted = false
+      }
+    }
+
+    fetchMessage()
   }, [])
 
   return <HomeScreenView loading={loading} message={message} />
