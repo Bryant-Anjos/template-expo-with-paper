@@ -13,5 +13,8 @@ pages:
   artifacts:
     paths:
       - public
+      - src/components/**/*
+      - src/screens/**/*
+      - stories/**/*
   only:
     - main
