@@ -10,8 +10,8 @@ cache:
 pages:
   stage: deploy
   before_script:
-    - npm install
-    - npm run build-storybook
+    - yarn install
+    - yarn build-storybook
   script:
     - mkdir public
     - cp -rp $DOCS_FOLDER/* public
