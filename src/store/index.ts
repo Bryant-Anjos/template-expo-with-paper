@@ -1,3 +1,4 @@
+import ReactotronReactNative from 'reactotron-react-native'
 import { Store } from 'redux'
 import { persistStore } from 'redux-persist'
 import createSagaMiddleware from 'redux-saga'
@@ -9,7 +10,9 @@ import persistReducers from './persistReducers'
 
 import type { ApplicationState } from './types'
 
-const sagaMonitor = __DEV__ ? console.tron.createSagaMonitor!() : undefined
+const sagaMonitor = __DEV__
+  ? (console.tron as typeof ReactotronReactNative)?.createSagaMonitor?.()
+  : undefined
 
 const sagaMiddleware = createSagaMiddleware({ sagaMonitor })
 
