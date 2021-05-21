@@ -1,8 +1,5 @@
 image: node:14
 
-variables:
-  DOCS_FOLDER: 'docs'
-
 cache:
   paths:
     - ./node_modules
@@ -11,10 +8,8 @@ pages:
   stage: deploy
   before_script:
     - yarn install
-    - yarn build-storybook
   script:
-    - mkdir public
-    - cp -rp $DOCS_FOLDER/* public
+    - yarn build-storybook
   artifacts:
     paths:
       - public
