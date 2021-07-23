@@ -26,6 +26,6 @@ it('renders correctly', async () => {
       </StyledProvider>
     </StoreProvider>,
   )
-  const message = [await waitFor(() => getByText('Hello world!'))]
-  expect(message.length).toBe(1)
+
+  expect(await waitFor(() => getByText('Hello world!'))).toBeDefined()
 })

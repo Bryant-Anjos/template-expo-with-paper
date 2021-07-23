@@ -1,5 +1,6 @@
 import { Reducer } from 'redux'
 
+import { Action } from './actions'
 import { AuthState, AuthTypes, User } from './types'
 
 const INITIAL_STATE: AuthState = {
@@ -10,7 +11,7 @@ const INITIAL_STATE: AuthState = {
   success: '',
 }
 
-const reducer: Reducer<AuthState> = (state = INITIAL_STATE, action) => {
+const reducer: Reducer<AuthState, Action> = (state = INITIAL_STATE, action) => {
   switch (action.type) {
     case AuthTypes.SIGN_IN: {
       type Payload = { accessToken: string; user: User }

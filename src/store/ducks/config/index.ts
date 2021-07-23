@@ -1,12 +1,16 @@
 import { Reducer } from 'redux'
 
+import { Action } from './actions'
 import { ConfigState, ConfigTypes } from './types'
 
 const INITIAL_STATE: ConfigState = {
   darkTheme: false,
 }
 
-const reducer: Reducer<ConfigState> = (state = INITIAL_STATE, action) => {
+const reducer: Reducer<ConfigState, Action> = (
+  state = INITIAL_STATE,
+  action,
+) => {
   switch (action.type) {
     case ConfigTypes.TOGGLE_THEME:
       return {
