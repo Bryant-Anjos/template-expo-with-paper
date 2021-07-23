@@ -1,13 +1,36 @@
 image: node:14
 
-cache:
-  paths:
-    - ./node_modules
+stages:
+  - yarn
+  - test
+  - pages
+
+yarn:
+  stage: yarn
+  script:
+    - yarn install
+  cache:
+    paths:
+      - node_modules/
+  artifacts:
+    expire_in: 1 days
+    when: on_success
+    paths:
+      - node_modules/
+
+test:
+  stage: test
+  dependencies:
+    - yarn
+  script:
+    - yarn format
+    - yarn lint
+    - yarn test
 
 pages:
-  stage: deploy
-  before_script:
-    - yarn install
+  stage: pages
+  dependencies:
+    - yarn
   script:
     - yarn build-storybook
   artifacts:

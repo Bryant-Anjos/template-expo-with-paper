@@ -2,7 +2,9 @@
 
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Storybook](https://cdn.jsdelivr.net/gh/storybookjs/brand@master/badge/badge-storybook.svg)](https://storybook.js.org/)  
+[![Storybook](https://cdn.jsdelivr.net/gh/storybookjs/brand@master/badge/badge-storybook.svg)](https://storybook.js.org/)
+[![Node.js Package](https://github.com/Bryant-Anjos/template-expo-with-paper/actions/workflows/nodejs.yml/badge.svg)](https://github.com/Bryant-Anjos/template-expo-with-paper/actions/workflows/nodejs.yml)
+[![Release Workflow](https://github.com/Bryant-Anjos/template-expo-with-paper/actions/workflows/release.yml/badge.svg)](https://github.com/Bryant-Anjos/template-expo-with-paper/actions/workflows/release.yml)
 
 Template to build cross-platform apps using react with typescript in expo. Pre configured with the React Native Paper Ui kit, redux, and eslint with prettier.
 

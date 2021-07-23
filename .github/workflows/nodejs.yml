@@ -1,0 +1,30 @@
+name: Tests
+on:
+  pull_request:
+    branches:
+      - '**'
+
+jobs:
+  tests:
+    name: Running Lint & Tests
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '14.x'
+          cache: 'yarn'
+
+      - name: install packages
+        run: yarn install
+
+      - name: run prettier
+        run: yarn format
+
+      - name: run lint
+        run: yarn lint
+
+      - name: run test
+        run: yarn test

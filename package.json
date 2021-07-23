@@ -1,4 +1,7 @@
 {
+  "name": "template-expo-with-paper",
+  "version": "1.0.0",
+  "description": "Template to build cross-platform apps using react with typescript in expo. Pre configured with the React Native Paper Ui kit, redux, and eslint with prettier.",
   "main": "node_modules/expo/AppEntry.js",
   "scripts": {
     "start": "expo start",
@@ -11,8 +14,20 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook -o docs",
     "test": "NODE_ENV=staging jest",
-    "test:watch": "jest --watchAll"
+    "test:watch": "jest --watchAll",
+    "format": "prettier --write ./src/**/*.{ts,tsx}",
+    "lint": "eslint --fix ./src/**/*.{ts,tsx}"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bryant-Anjos/template-expo-with-paper.git"
+  },
+  "author": "Bryant Moreira dos Anjos",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Bryant-Anjos/template-expo-with-paper/issues"
+  },
+  "homepage": "https://github.com/Bryant-Anjos/template-expo-with-paper#readme",
   "dependencies": {
     "@expo/vector-icons": "^12.0.0",
     "@react-native-async-storage/async-storage": "^1.14.1",
@@ -105,7 +120,6 @@
     "storybook-addon-react-docgen": "^1.2.42",
     "typescript": "~4.3.5"
   },
-  "private": true,
   "jest": {
     "preset": "jest-expo",
     "setupFilesAfterEnv": [
