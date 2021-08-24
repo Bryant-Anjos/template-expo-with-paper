@@ -10,7 +10,7 @@ Template to build cross-platform apps using react with typescript in expo. Pre c
 
 ## Installation
 
-Copy the `.env.enxample` and rename to `.env`, then add the required values to variables.  
+Copy the `.env.example` and rename to `.env`, then add the required values to variables.  
 ```bash
 $ yarn install
 ```
