@@ -1,6 +1,6 @@
 {
   "name": "template-expo-with-paper",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Template to build cross-platform apps using react with typescript in expo. Pre configured with the React Native Paper Ui kit, redux, and eslint with prettier.",
   "main": "node_modules/expo/AppEntry.js",
   "scripts": {

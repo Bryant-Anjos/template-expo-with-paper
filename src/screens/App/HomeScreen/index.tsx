@@ -1,35 +1,29 @@
-import axios from 'axios'
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 
-import HomeScreenView from './view'
+import logo from '@assets/svg/react.svg'
+import SVG from '@components/SVG'
+import { i18n } from '@lang/index'
 
-const HomeScreenContainer: React.FC = () => {
-  const [loading, setLoading] = useState(false)
-  const [message, setMessage] = useState('')
+import DisplaySnackbarButton from './components/DisplaySnackbarButton'
+import Message from './components/Message'
+import ToggleThemeButton from './components/ToggleThemeButton'
+import { Container, Spacing, TextPrimary } from './styles'
 
-  useEffect(() => {
-    let mounted = true
+const HomeScreen: React.FC = () => (
+  <Container>
+    <SVG source={logo} width={50} height={50} />
 
-    async function fetchMessage() {
-      if (mounted) setLoading(true)
+    <TextPrimary>{i18n.t('hello-world')}</TextPrimary>
+    <ToggleThemeButton />
 
-      try {
-        const response = await axios.get('api/hello')
+    <Spacing />
 
-        if (mounted) setMessage(response.data.message)
-      } finally {
-        if (mounted) setLoading(false)
-      }
-    }
+    <DisplaySnackbarButton />
 
-    fetchMessage()
+    <Spacing />
 
-    return function unmount() {
-      mounted = false
-    }
-  }, [])
+    <Message />
+  </Container>
+)
 
-  return <HomeScreenView loading={loading} message={message} />
-}
-
-export default HomeScreenContainer
+export default HomeScreen
